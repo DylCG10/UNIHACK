@@ -1,5 +1,8 @@
 import { Component, useEffect } from 'react';
 import './App.css';
+// import './App.css';
+
+import './styling/styles.css'
 
 function HostingDialogue() {
 
@@ -55,13 +58,17 @@ class App extends Component{
   render() {
   return (
     <div className="App">
-      <h1>Movie app</h1>
-      <h3>All your movie commitment issues solved!</h3>
       <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
       {this.state.hosting && <HostingDialogue />}
       <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
       {this.state.joining && <JoiningDialogue />}
-
+      
+      <nav className="navbar">
+        <a href="/" id="site-title">Movie App</a>
+        <a href="/" id="home">Home</a>
+        <a href="/" id="instructions">Instructions</a>
+      </nav>
+      <h1>All your movie commitment issues solved!</h1>
     </div>
   );
 
