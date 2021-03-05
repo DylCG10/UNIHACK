@@ -58,11 +58,6 @@ class App extends Component{
   render() {
   return (
     <div className="App">
-      <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
-      {this.state.hosting && <HostingDialogue />}
-      <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
-      {this.state.joining && <JoiningDialogue />}
-      
       <nav className="navbar">
         <a href="/" id="site-title">Movie App</a>
         <nav className="navlinks">
@@ -72,9 +67,16 @@ class App extends Component{
         </nav>
       </nav>
       <div className="body">
-        <h1>The. Syntax. Choice.</h1>
-        <h2>All your movie commitment issues solved!</h2>
-
+        <div className="body-text">
+          <h1>The. Syntax. Choice.</h1>
+          <h2>All your movie commitment issues solved!</h2>
+        </div>
+        <div className="body-button">
+          <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
+          {this.state.hosting && <HostingDialogue />}
+          <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
+          {this.state.joining && <JoiningDialogue />}
+        </div>
       </div>
     </div>
   );
