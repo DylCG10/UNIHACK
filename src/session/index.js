@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 
-class Session extends Component() {
-    
+const hostSessionButton = document.querySelector("#host-session");
+const joinSessionButton = document.querySelector("#join-session");
+
+//Listeners
+joinSessionButton.addEventListener('click', joinSess);
+hostSessionButton.addEventListener('click', hostSess);
+
+const joinSess = () => {
+    console.log("joining session..");
+
 }
 
-export default Session;
+const hostSess = () => {
+    console.log("hosting session...");
+}
