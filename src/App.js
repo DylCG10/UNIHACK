@@ -1,21 +1,32 @@
 import { Component, useEffect } from 'react';
 import './App.css';
+import io from 'socket.io-client';
+
 // import './App.css';
 
 import './styling/styles.css'
+import { removeTypeDuplicates } from '@babel/types';
 
-function HostingDialogue() {
+const socket = io("http://localhost:3000");
 
-  return (
-    <h1>Hosting</h1>
-  )
-}
 
-function JoiningDialogue() {
-  return (
-    <h1>Joining</h1>
-  )
-}
+// function Session() {
+//   function HostingDialogue() {
+  
+//     console.log("a user connected");
+//     return (
+//       <h1>Hosting</h1>
+//     )
+//   }
+  
+//   function JoiningDialogue() {
+//     return (
+//       <h1>Joining</h1>
+//     )
+//   }
+
+
+// }
 
 class App extends Component{
   // const hostSessionButton = document.querySelector("#host-session");
@@ -32,6 +43,28 @@ class App extends Component{
       hosting: false,
       joining: false
     }
+
+    // socket.on('new-remote-operations',
+    //   ({ editorId, ops }: { editorId: string; ops: string }) => {
+    //     if (id.current !== editorId) {
+    //       re
+    //     }
+    //   }
+      
+    // }))
+  }
+  
+  submit = () => {
+    console.log('submit');
+
+    // socket.on('new-remote-operations',
+    //   ({ editorId, ops }: { editorId: string; ops: string }) => {
+    //     if (id.current !== editorId) {
+    //       re
+    //     }
+    //   }
+      
+    // }))
   }
 
   joinSess = () => {
@@ -44,8 +77,11 @@ class App extends Component{
 
   hostSess = () => {
     console.log("hosting session...");
-    this.setState({ hosting: true, joining: false})
+    this.setState({ hosting: true, joining: false })
+    
   }
+
+
   
 
   //Listeners
@@ -59,9 +95,22 @@ class App extends Component{
   return (
     <div className="App">
       <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
-      {this.state.hosting && <HostingDialogue />}
+      {this.state.hosting &&
+          <div>
+          <h1>Hosting</h1>
+          <button>Cancel</button>
+          <button type="submit" onClick={this.submit}>Submit</button>
+        </div>
+      }
       <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
-      {this.state.joining && <JoiningDialogue />}
+      {this.state.joining && 
+        <div>
+          <h1>Joining</h1>
+        <button type="submit" onClick={this.submit}>Cancel</button>
+          <button>Submit</button>
+        </div>
+      
+      }
       
       <nav className="navbar">
         <a href="/" id="site-title">Movie App</a>

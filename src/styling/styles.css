@@ -1,72 +1,76 @@
 * {
-    text-decoration: none;
-    font-family: 'Kumbh Sans', sans-serif;
+  text-decoration: none;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .navbar {
-    height: 80px;
-    display: flex;
-    justify-content: space-around;
-    background: #131313;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  background: #131313;
 }
 
 #site-title {
-    /* background: green; */
-    padding-right: 100px;
-    align-self: center;
-    font-size: 40px;
-    color: #fff;
-    /* margin-left: 150px; */
-    background: -webkit-linear-gradient(#eee,#0f729c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  /* background: green; */
+  padding-right: 100px;
+  align-self: center;
+  font-size: 40px;
+  color: #fff;
+  /* margin-left: 150px; */
+  background: -webkit-linear-gradient(#eee, #0f729c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navlinks {
-    position: sticky;
-    display: flex;
-    justify-content: space-around;
-    /* margin-right: 100px; */
-    align-items: center;
-    font-size: 20px;
-    /* background: green; */
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  /* margin-right: 100px; */
+  align-items: center;
+  font-size: 20px;
+  /* background: green; */
 }
 
-#home, #instructions, #feedback {
-    color: #fff;
-    margin: 15px;
+#home,
+#instructions,
+#feedback {
+  color: #fff;
+  margin: 15px;
 }
 
-#home:hover, #instructions:hover, #feedback:hover {
-    color: #89ceeb;
-    transition: all 0.2s ease-in-out;
+#home:hover,
+#instructions:hover,
+#feedback:hover {
+  color: #89ceeb;
+  transition: all 0.2s ease-in-out;
 }
 
 .body {
-    margin: 80px;
-    width: 50%;
-    height: 520px;
-    background: -webkit-linear-gradient(#eee,#0f729c);
-    /* position: sticky; */
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: flex-start;
+  margin: 80px;
+  width: 50%;
+  height: 520px;
+  background: -webkit-linear-gradient(#eee, #0f729c);
+  /* position: sticky; */
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 h1 {
-    font-size: 80px;
-    width: 60%;
-    background: #131313;
-    /* border-radius: 20px; */
-    color: #131313;
-    padding-left: 50px;
+  font-size: 80px;
+  width: 60%;
+  background: #131313;
+  /* border-radius: 20px; */
+  color: #131313;
+  padding-left: 50px;
 }
 
 h2 {
-    font-size: 40px;
-    width: 60%;
-    padding-left: 50px;
-    background: #131313;
-    /* color: #fff; */
+  font-size: 40px;
+  width: 60%;
+  padding-left: 50px;
+  background: #131313;
+  /* color: #fff; */
 }
