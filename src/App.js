@@ -75,6 +75,7 @@ class App extends Component{
           <div className="hosting">
             <button id="host-session" type="submit" onClick={this.hostSess}>Host New Session</button>
             {this.state.hosting && <HostingDialogue />}
+            
           </div>
           <div className="joining">
             <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
