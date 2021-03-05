@@ -74,35 +74,3 @@ h2 {
   background: #131313;
   /* color: #fff; */
 }
-
-.body-button {
-    height: 100%;
-    width: 450px;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    /* background: blue; */
-    align-self: center;
-}
-
-#host-session, #join-session {
-    border: none;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 30px;
-    padding: 20px;
-    margin: 30px 60px 30px 60px;
-    border-radius: 5px;
-    background-color: #f5deb3;
-    background-color: #c4b291;
-    color: #131313;
-    transition-duration: 0.4s;
-    /* position: relative; */
-}
-
-#host-session:hover, #join-session:hover {
-    background-color: #ebe4c9;
-    cursor: pointer;
-    /* padding: 30px; */
-}
-

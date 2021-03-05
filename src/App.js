@@ -94,6 +94,24 @@ class App extends Component{
   render() {
   return (
     <div className="App">
+      <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
+      {this.state.hosting &&
+          <div>
+          <h1>Hosting</h1>
+          <button>Cancel</button>
+          <button type="submit" onClick={this.submit}>Submit</button>
+        </div>
+      }
+      <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
+      {this.state.joining && 
+        <div>
+          <h1>Joining</h1>
+        <button type="submit" onClick={this.submit}>Cancel</button>
+          <button>Submit</button>
+        </div>
+      
+      }
+      
       <nav className="navbar">
         <a href="/" id="site-title">Movie App</a>
         <nav className="navlinks">
@@ -103,32 +121,9 @@ class App extends Component{
         </nav>
       </nav>
       <div className="body">
-        <div className="body-text">
-          <h1>The. Syntax. Choice.</h1>
-          <h2>All your movie commitment issues solved!</h2>
-        </div>
-        <div className="body-button">
-          <div className="hosting">
-            <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
-            {this.state.hosting &&
-                <div>
-                <h1>Hosting</h1>
-                <button>Cancel</button>
-                <button type="submit" onClick={this.submit}>Submit</button>
-              </div>
-            }
-          </div>
-          <div className="joining">
-          <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
-            {this.state.joining && 
-              <div>
-                <h1>Joining</h1>
-              <button type="submit" onClick={this.submit}>Cancel</button>
-                <button>Submit</button>
-              </div>
-            }
-          </div>
-        </div>
+        <h1>The. Syntax. Choice.</h1>
+        <h2>All your movie commitment issues solved!</h2>
+
       </div>
     </div>
   );
