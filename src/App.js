@@ -65,10 +65,17 @@ class App extends Component{
       
       <nav className="navbar">
         <a href="/" id="site-title">Movie App</a>
-        <a href="/" id="home">Home</a>
-        <a href="/" id="instructions">Instructions</a>
+        <nav className="navlinks">
+          <a href="/" className="link" id="home">Home</a>
+          <a href="/" className="link" id="instructions">Instructions</a>
+          <a href="/" className="link" id="feedback">Give feedback</a>
+        </nav>
       </nav>
-      <h1>All your movie commitment issues solved!</h1>
+      <div className="body">
+        <h1>The. Syntax. Choice.</h1>
+        <h2>All your movie commitment issues solved!</h2>
+
+      </div>
     </div>
   );
 
