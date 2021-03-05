@@ -111,23 +111,23 @@ class App extends Component{
           <div className="hosting">
             <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
             {this.state.hosting &&
-                <div>
-                <h1>Hosting</h1>
-                <button>Cancel</button>
-                <button type="submit" onClick={this.submit}>Submit</button>
+              <div className="host-pop-content">
+                <h2>Enter your name to start hosting!</h2>
+                <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
+                <button className="cancel">Cancel</button>
               </div>
             }
           </div>
           <div className="joining">
-          <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
-            {this.state.joining && 
-              <div>
-                <h1>Joining</h1>
-              <button type="submit" onClick={this.submit}>Cancel</button>
-                <button>Submit</button>
-              </div>
-            }
-          </div>
+            <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
+              {this.state.joining && 
+                <div className="join-pop-content">
+                  <h2>Joining</h2>
+                  <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
+                  <button className="cancel">Cancel</button>
+                </div>
+              }
+            </div>
         </div>
       </div>
     </div>
