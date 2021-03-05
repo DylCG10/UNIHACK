@@ -72,10 +72,14 @@ class App extends Component{
           <h2>All your movie commitment issues solved!</h2>
         </div>
         <div className="body-button">
-          <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
-          {this.state.hosting && <HostingDialogue />}
-          <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
-          {this.state.joining && <JoiningDialogue />}
+          <div className="hosting">
+            <button id="host-session" type="submit" onClick={this.hostSess}>Host New Session</button>
+            {this.state.hosting && <HostingDialogue />}
+          </div>
+          <div className="joining">
+            <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
+            {this.state.joining && <JoiningDialogue />}
+          </div>
         </div>
       </div>
     </div>
