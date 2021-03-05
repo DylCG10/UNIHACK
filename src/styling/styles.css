@@ -2,3 +2,13 @@
     text-decoration: none;
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+.navbar {
+    display: flex;
+    justify-items: center;
+}
+
+#site-title {
+    font-size: 50px;
+    color: black;
+}
