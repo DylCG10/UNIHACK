@@ -112,9 +112,11 @@ class App extends Component{
             <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
             {this.state.hosting &&
               <div className="host-pop-content">
-                <h2>Enter your name to start hosting!</h2>
-                <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
-                <button className="cancel">Cancel</button>
+                <form>
+                  <input placeholder = "Enter username"></input>
+                  <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
+                  <button className="cancel">Cancel</button>
+                </form>
               </div>
             }
           </div>
