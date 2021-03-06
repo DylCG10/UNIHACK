@@ -7,7 +7,7 @@ import io from 'socket.io-client';
 import './styling/styles.css'
 import { removeTypeDuplicates } from '@babel/types';
 
-
+import { quizSubmit } from './movieList/actions.js';
 
 // function Session() {
 //   function HostingDialogue() {
@@ -40,8 +40,12 @@ class App extends Component{
     super(props);
     this.state = {
       hosting: false,
-      joining: false
+      joining: false,
+      username: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     // socket.on('new-remote-operations',
     //   ({ editorId, ops }: { editorId: string; ops: string }) => {
@@ -52,10 +56,15 @@ class App extends Component{
       
     // }))
   }
-  
-  submit = () => {
-    console.log('submit');
 
+  handleChange(event) {
+    this.setState({value: event.target.value})
+  }
+  
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log("Username: ", this.state.value);
     // socket.on('new-remote-operations',
     //   ({ editorId, ops }: { editorId: string; ops: string }) => {
     //     if (id.current !== editorId) {
@@ -64,6 +73,7 @@ class App extends Component{
     //   }
       
     // }))
+    this.props.quizSubmit();
   }
 
   joinSess = () => {
@@ -115,11 +125,11 @@ class App extends Component{
               <div className="host-pop-box">
                 <div className="host-pop-content">
                   <p id="host-text">Enter your name to start hosting</p>
-                  <form id="host-form">
-                    <input class="input" placeholder = "Speedy Gonzalez"></input>
+                  <form id="host-form" onSubmit = {this.handleSubmit}>
+                  <input class="input" placeholder="Speedy Gonzalez" onChange={this.handleChange}></input>
                     <div className="button-host">
                       <button className="cancel">Cancel</button>
-                      <button className="submit" type="submit" onClick={this.submit}>Let's go</button>
+                      <button className="submit" type="submit" >Let's go</button>
                     </div>
                   </form>
                 </div>
