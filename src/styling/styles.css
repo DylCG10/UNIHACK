@@ -7,7 +7,7 @@
     height: 80px;
     display: flex;
     justify-content: space-around;
-    background: #131313;
+    background: #001e30;
 }
 
 #site-title {
@@ -17,7 +17,7 @@
     font-size: 30px;
     color: #fff;
     /* margin-left: 150px; */
-    background: -webkit-linear-gradient(#eee,#0f729c);
+    background: -webkit-linear-gradient(#eee,#64afe0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -46,7 +46,7 @@
     width: 100%;
     min-width: 600px;
     height: 100%;
-    background: #131313;
+    background: #001520;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -216,20 +216,3 @@
 .submit:hover {
     background: rgb(233, 186, 100);
 }
-
-/* .dropbtn {
-    width: 70%;
-    height: 40px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #c4b291;
-    color: #131313;
-    transition-duration: 0.4s;
-} */
