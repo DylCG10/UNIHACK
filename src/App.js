@@ -94,7 +94,7 @@ class App extends Component{
   return (
     <div className="App">
       <nav className="navbar">
-        <a href="/" id="site-title">Movie App</a>
+        <a href="/" id="site-title"><h2>Movie App</h2></a>
         <nav className="navlinks">
           <a href="/" className="link" id="home">Home</a>
           <a href="/" className="link" id="instructions">Instructions</a>
@@ -111,10 +111,13 @@ class App extends Component{
             <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
             {this.state.hosting &&
               <div className="host-pop-content">
+                <p id="host-text">What's your name?</p>
                 <form>
-                  <input placeholder = "Enter username"></input>
-                  <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
-                  <button className="cancel">Cancel</button>
+                  <input placeholder = "Speedy Gonzalez"></input>
+                  <div className="button-host">
+                    <button className="cancel">Cancel</button>
+                    <button className="dropbtn" type="submit" onClick={this.submit}>Let's go!</button>
+                  </div>
                 </form>
               </div>
             }
@@ -124,8 +127,10 @@ class App extends Component{
               {this.state.joining && 
                 <div className="join-pop-content">
                   <h2>Joining</h2>
-                  <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
-                  <button className="cancel">Cancel</button>
+                  <div className="join-button">
+                    <button className="cancel">Cancel</button>
+                    <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
+                  </div>
                 </div>
               }
             </div>
