@@ -3,6 +3,12 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
 .navbar {
     height: 80px;
     display: flex;
@@ -42,19 +48,21 @@
     transition: all 0.2s ease-in-out;
 }
 
+/* start body */
 .body {
     width: 100%;
     min-width: 600px;
     height: 100%;
+    height: 550px;
     background: #001520;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     margin: 0px;
+    /* background-color: red; */
 }
 
 .body-text {
-    /* background: green; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -93,6 +101,7 @@
     flex-direction: column;
     /* background: blue; */
     align-self: center;
+    justify-content: center;
 }
 
 #host-session, #join-session {
@@ -111,13 +120,11 @@
     background-color: #c4b291;
     color: #204979;
     transition-duration: 0.4s;
-    /* position: relative; */
 }
 
 #host-session:hover, #join-session:hover {
     background-color: #ebe4c9;
     cursor: pointer;
-    /* padding: 30px; */
 }
 
 .hosting, .joining {
@@ -220,16 +227,75 @@
 }
 
 /* start moviequiz styling */
+.forms {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+}
+
 .form-q {
     color: rgb(226, 205, 170);
 }
 
-.question {
-    background-color: red;
-    margin: 10px;
+.form-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    /* background-color: red; */
 }
 
-.form-content {
+.option {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    /* background: green; */
+    width: 200px;
+    height: 400px;
+    margin: 5px;
+    position: relative;
 }
+
+.option:hover {
+    z-index: 999;
+}
+
+span.checkmark {
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    width: 70px;
+    height: 70px;
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+}
+
+img:hover {
+    width: 230px;
+    height: 330px;
+    position: inherit;
+    cursor: pointer;
+    border-style: solid;
+    border-color: green;
+    border-radius: 10px;
+}
+
+.option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}  
+  

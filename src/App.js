@@ -93,14 +93,16 @@ class App extends Component{
   render() {
   return (
     <div className="App">
-      <nav className="navbar">
-        <a href="/" id="site-title">Movie App</a>
-        <nav className="navlinks">
-          <a href="/" className="link" id="home">Home</a>
-          <a href="/" className="link" id="instructions">Instructions</a>
-          <a href="/" className="link" id="feedback">Give feedback</a>
+      <div className="nav-container">
+        <nav className="navbar">
+          <a href="/" id="site-title">Movie App</a>
+          <nav className="navlinks">
+            <a href="/" className="link" id="home">Home</a>
+            <a href="/" className="link" id="instructions">Instructions</a>
+            <a href="/" className="link" id="feedback">Give feedback</a>
+          </nav>
         </nav>
-      </nav>
+      </div>
       <div className="body">
         <div className="body-text">
           <h1>The. Syntax. Choice.</h1>
