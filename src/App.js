@@ -7,7 +7,6 @@ import io from 'socket.io-client';
 import './styling/styles.css'
 import { removeTypeDuplicates } from '@babel/types';
 
-const socket = io("http://localhost:3000");
 
 
 // function Session() {
