@@ -130,10 +130,10 @@ class App extends Component{
             {this.state.joining && 
               <div className="join-pop-box">
                 <div className="join-pop-content">
-                  <p>Join a group to start choosing movies!</p>
+                  <p>Enter your name and group ID to start choosing movies!</p>
                   <form id="join-form">
                     <input class="input" placeholder = "Speedy Gonzalez"></input>
-                    <input class="input" placeholder = "Group id"></input>
+                    <input class="input" placeholder = "#abc123"></input>
                     <div className="button-join">
                       <button className="cancel">Cancel</button>
                       <button className="submit" type="submit" onClick={this.submit}>Enter</button>
