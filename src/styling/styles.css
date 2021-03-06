@@ -7,17 +7,17 @@
     height: 80px;
     display: flex;
     justify-content: space-around;
-    background: #131313;
+    background: #001e30;
 }
 
 #site-title {
     /* background: green; */
     padding-right: 100px;
     align-self: center;
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
     /* margin-left: 150px; */
-    background: -webkit-linear-gradient(#eee,#0f729c);
+    background: -webkit-linear-gradient(#eee,#64afe0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -44,8 +44,9 @@
 
 .body {
     width: 100%;
+    min-width: 600px;
     height: 100%;
-    background: #131313;
+    background: #001520;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -68,7 +69,6 @@
     justify-content: center;
     font-size: 80px;
     width: 30%;
-    /* background: red; */
     margin: 0;
     margin: 25px 10px 10px 10px;
     color: #e0c9a6;
@@ -79,7 +79,6 @@
     justify-content: center;
     font-size: 40px;
     width: 70%;;
-    /* background: red; */
     margin: 0;
     padding: 20px;
     color: #c59c6b;
@@ -88,6 +87,7 @@
 .body-button {
     height: 100%;
     width: 450px;
+    min-width: 350px;
     border: none;
     display: flex;
     flex-direction: column;
@@ -97,14 +97,19 @@
 
 #host-session, #join-session {
     border: none;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 18px;
+    height: 60px;
+    width: 70%;
+    min-width: 270px;
+    padding: 0px;
     margin: 30px 60px 30px 60px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #c4b291;
-    color: #131313;
+    color: #204979;
     transition-duration: 0.4s;
     /* position: relative; */
 }
@@ -116,59 +121,100 @@
 }
 
 .hosting, .joining {
-    position: relative;
     display: inline-block;
+    position: relative;
 }
 
-.host-pop-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    background: #f1f1f1;
+/* pop up box css */
+.host-pop-box, .join-pop-box {
+    z-index: 999;
     background: -webkit-linear-gradient(rgb(183, 115, 192),#0f729c);
-    width: 100%;
+    position: fixed;
+    right: 130px;
+    top: 20%;
+    width: 400px;
+    height: 350px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.join-pop-content {
+.host-pop-content, .join-pop-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-button p {
+    font-size: 35px;
+    width: 80%;
+    margin: 20px; 
+    color: white;
+}
+
+.button-host, .button-join {
+    display: flex;
+    justify-content: center;
+}
+
+#host-form, #join-form {
+    /* background: red; */
+    height: 150px; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
-    background: -webkit-linear-gradient(rgb(186, 128, 194),#1677a0);
-    width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 10px;
 }
 
-.dropbtn {
-    width: 70%;
-    height: 40px;
+.input {
+    border-radius: 5px;
+    background-color: rgb(5, 1, 20);
+    border-color: rgb(93, 125, 184);
+    border-width: 2px;
+    border-style: solid;
+    font-size: 20px;
+    height: 50px;
+    width: 270px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.cancel, .submit {
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 20px;
-    padding: 20px;
-    margin: 10px;
+    height: 45px;
+    width: 140px;
     border-radius: 5px;
-    background-color: #c4b291;
-    color: #131313;
-    transition-duration: 0.4s;
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-size: 17px;
 }
 
-.body-button h2 {
-    font-size: 30px;
-    width: 60%;
-    margin: 10px;
-    color: white;
-    /* background: -webkit-linear-gradient(rgb(183, 115, 192),#0f729c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+.cancel {
+    background: none;
+}
+
+.cancel:hover {
+    background: #085677c2;
+    color: rgb(233, 220, 197);
+}
+
+.submit {
+    background: rgb(253, 100, 246);
+}
+
+.submit:hover {
+    background: rgb(233, 186, 100);
 }
