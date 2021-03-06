@@ -94,7 +94,6 @@ class App extends Component{
   return (
     <div className="App">
       <nav className="navbar">
-        {/* <a href="/" id="site-title"><h2>Movie App</h2></a> */}
         <a href="/" id="site-title">Movie App</a>
         <nav className="navlinks">
           <a href="/" className="link" id="home">Home</a>

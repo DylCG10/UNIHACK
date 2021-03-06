@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import MovieList from './movieList';
+import MovieQuiz from './movieQuiz';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Route path='/' exact component={App} />
-      <Route path = '/movies' exact component = {MovieList} />
+      <Route path = '/moviequiz' exact component = {MovieQuiz} />
+      <Route path = '/movielist' exact component = {MovieList} />
 
     </Router>
   </React.StrictMode>,
