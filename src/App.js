@@ -94,7 +94,8 @@ class App extends Component{
   return (
     <div className="App">
       <nav className="navbar">
-        <a href="/" id="site-title"><h2>Movie App</h2></a>
+        {/* <a href="/" id="site-title"><h2>Movie App</h2></a> */}
+        <a href="/" id="site-title">Movie App</a>
         <nav className="navlinks">
           <a href="/" className="link" id="home">Home</a>
           <a href="/" className="link" id="instructions">Instructions</a>
@@ -108,32 +109,39 @@ class App extends Component{
         </div>
         <div className="body-button">
           <div className="hosting">
-            <button id="host-session" type="submit" onClick={this.hostSess}>Host Session</button>
+            <button id="host-session" type="submit" onClick={this.hostSess}><h2>Host new session</h2></button>
             {this.state.hosting &&
-              <div className="host-pop-content">
-                <p id="host-text">What's your name?</p>
-                <form>
-                  <input placeholder = "Speedy Gonzalez"></input>
-                  <div className="button-host">
-                    <button className="cancel">Cancel</button>
-                    <button className="dropbtn" type="submit" onClick={this.submit}>Let's go!</button>
-                  </div>
-                </form>
+              <div className="host-pop-box">
+                <div className="host-pop-content">
+                  <p id="host-text">What's your name?</p>
+                  <form id="host-form">
+                    <input class="input" placeholder = "Speedy Gonzalez"></input>
+                    <div className="button-host">
+                      <button className="cancel">Cancel</button>
+                      <button className="submit" type="submit" onClick={this.submit}>Let's go</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             }
           </div>
           <div className="joining">
-            <button id="join-session" type="submit" onClick={this.joinSess}>Join Session</button>
-              {this.state.joining && 
+            <button id="join-session" type="submit" onClick={this.joinSess}><h2>Join session</h2></button>
+            {this.state.joining && 
+              <div className="join-pop-box">
                 <div className="join-pop-content">
-                  <h2>Joining</h2>
-                  <div className="join-button">
-                    <button className="cancel">Cancel</button>
-                    <button className="dropbtn" type="submit" onClick={this.submit}>Enter</button>
-                  </div>
+                  <p>Joining</p>
+                  <form id="join-form">
+                    <input class="input" placeholder = "Speedy Gonzalez"></input>
+                    <div className="button-join">
+                      <button className="cancel">Cancel</button>
+                      <button className="submit" type="submit" onClick={this.submit}>Enter</button>
+                    </div>
+                  </form>
                 </div>
-              }
-            </div>
+              </div>
+            }
+          </div>
         </div>
       </div>
     </div>
