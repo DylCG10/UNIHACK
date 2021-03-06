@@ -7,7 +7,6 @@ import io from 'socket.io-client';
 import './styling/styles.css'
 import { removeTypeDuplicates } from '@babel/types';
 
-const socket = io("http://localhost:3000");
 
 
 // function Session() {
@@ -123,8 +122,8 @@ class App extends Component{
             {this.state.joining && 
               <div>
                 <h1>Joining</h1>
-              <button type="submit" onClick={this.submit}>Cancel</button>
-                <button>Submit</button>
+              <button type="submit" >Cancel</button>
+                <button onClick={this.submit}>Submit</button>
               </div>
             }
           </div>
