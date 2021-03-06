@@ -151,8 +151,8 @@
 }
 
 .body-button p {
-    font-size: 40px;
-    width: 60%;
+    font-size: 35px;
+    width: 80%;
     margin: 20px; 
     color: white;
 }
@@ -178,6 +178,7 @@
     font-size: 20px;
     height: 50px;
     width: 270px;
+    margin: 5px;
     display: flex;
     justify-content: center;
     color: #fff;
@@ -195,6 +196,25 @@
     margin: 10px;
     font-size: 15px;
     cursor: pointer;
+    transition-duration: 0.3s;
+    font-size: 17px;
+}
+
+.cancel {
+    background: none;
+}
+
+.cancel:hover {
+    background: #085677c2;
+    color: rgb(233, 220, 197);
+}
+
+.submit {
+    background: rgb(253, 100, 246);
+}
+
+.submit:hover {
+    background: rgb(233, 186, 100);
 }
 
 /* .dropbtn {

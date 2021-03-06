@@ -113,7 +113,7 @@ class App extends Component{
             {this.state.hosting &&
               <div className="host-pop-box">
                 <div className="host-pop-content">
-                  <p id="host-text">What's your name?</p>
+                  <p id="host-text">Enter your name to start hosting</p>
                   <form id="host-form">
                     <input class="input" placeholder = "Speedy Gonzalez"></input>
                     <div className="button-host">
@@ -130,9 +130,10 @@ class App extends Component{
             {this.state.joining && 
               <div className="join-pop-box">
                 <div className="join-pop-content">
-                  <p>Joining</p>
+                  <p>Join a group to start choosing movies!</p>
                   <form id="join-form">
                     <input class="input" placeholder = "Speedy Gonzalez"></input>
+                    <input class="input" placeholder = "Group id"></input>
                     <div className="button-join">
                       <button className="cancel">Cancel</button>
                       <button className="submit" type="submit" onClick={this.submit}>Enter</button>
