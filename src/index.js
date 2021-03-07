@@ -5,18 +5,57 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import { applyMiddleware, createStore, compose } from 'redux';
+import { Provider } from 'react-redux';
+
+import { createBrowserHistory } from 'history';
+
+
+
 import MovieList from './movieList';
 import MovieQuiz from './movieQuiz';
+import Login from './login/index.js';
+
+import createSagaMiddleware from 'redux-saga'
+
+
+import IndexReducer from './index-reducer';
+import IndexSagas from './index-sagas';
+
+import Firebase, { FirebaseContext } from './firebase';
+
+
+const browserHistory = createBrowserHistory();
+
+
+const composeSetup = process.env.NODE_ENV !== 'production' && typeof window === 'object' &&  
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+  IndexReducer, 
+  composeSetup(applyMiddleware(sagaMiddleware)),
+);
+
+sagaMiddleware.run(IndexSagas);
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Route path='/' exact component={App} />
-      <Route path = '/moviequiz' exact component = {MovieQuiz} />
-      <Route path = '/movielist' exact component = {MovieList} />
+  <Provider store={store}>
+    <FirebaseContext.Provider value={new Firebase()}>
 
-    </Router>
-  </React.StrictMode>,
+      <Router history = {browserHistory}>
+        <Route path='/' exact component={Login} />
+        <Route path = '/moviequiz' exact component = {MovieQuiz} />
+        <Route path = '/movielist' exact component = {MovieList} />
+
+        </Router>
+      </FirebaseContext.Provider>,
+
+  </Provider>,
   document.getElementById('root')
 );
 
