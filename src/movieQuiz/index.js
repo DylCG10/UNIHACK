@@ -24,20 +24,23 @@ class MovieQuiz extends React.Component {
                         <div className="question">
                             <form className="form-content">
                                 <div className="option opt1">
-                                    <label for="harry-potter"><img src={hp} alt="harry potter"/>
+                                    <label className="container" for="harry-potter">
                                         <input type="radio" id="harry-potter" name="q1" value="harry-potter"/>
+                                        <img class="image" src={hp} alt="harry potter"/>
                                     </label>
                                     <p className="descriptions">Harry Potter</p>
                                 </div>
                                 <div className="option opt2">
-                                    <label for="edge-of-tomorrow"><img src={eot} alt="edge of tomorrow"/>
+                                    <label className="container" for="edge-of-tomorrow">
                                         <input type="radio" id="edge-of-tomorrow" name="q1" value="edge-of-tomorrow"/>
+                                        <img class="image" src={eot} alt="edge of tomorrow"/>
                                     </label>
                                     <p className="descriptions">Edge of Tomorrow</p>
                                 </div>
                                 <div className="option opt3">
-                                    <label for="mission-impossible"><img src={mi} alt="mission impossible"/>
+                                    <label className="container" for="mission-impossible">
                                         <input type="radio" id="mission-impossible" name="q1" value="mission-impossible"/>
+                                        <img class="image" src={mi} alt="mission impossible"/>
                                     </label>
                                     <p className="descriptions">Mission Impossible</p>
                                 </div>
