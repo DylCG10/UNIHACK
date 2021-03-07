@@ -263,7 +263,7 @@
 }
 
 .option:hover {
-    z-index: 900;
+    z-index: 900 ;
 }
 
 .image {
