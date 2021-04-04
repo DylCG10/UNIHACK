@@ -107,7 +107,7 @@ class Login extends Component{
     <div className="App">
       <div className="nav-container">
         <nav className="navbar">
-          <a href="/" id="site-title">Movie App</a>
+          <a href="/" id="site-title">MovieSort Pro</a>
           <nav className="navlinks">
             <a href="/" className="link" id="home">Home</a>
             <a href="/" className="link" id="instructions">Instructions</a>
